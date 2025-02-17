@@ -1,6 +1,5 @@
 package org.example.feb15.supplier;
-
-\import java.util.function.Supplier;
+import java.util.function.Supplier;
 
 public class SupplierMain {
     public static void main(String[] args) {
