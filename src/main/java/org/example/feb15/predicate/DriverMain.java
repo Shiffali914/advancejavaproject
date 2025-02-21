@@ -1,5 +1,7 @@
 package org.example.feb15.predicate;
 
+import java.util.function.Function;
+
 public class DriverMain {
 
     public static void main(String[] args) {
@@ -15,11 +17,13 @@ public class DriverMain {
 
                                   OR */
 
-        ONdrivetest.ValidateLicense((dl)->dl.length()==15,"H34256787897665");
-        BCdrivetest.ValidateLicense((dl)->dl.length()==16,"H3425678789765");
-        QCdrivetest.ValidateLicense((dl)->dl.length()==14,"H3425678789716");
+        Function<String,Boolean>function1=(dl)->dl.length()==15;
+        Function<String,Boolean>function2=(dl)->dl.length()==16;
+        Function<String,Boolean>function3=(dl)->dl.length()==14;
 
-
+        ONdrivetest.ValidateLicense(function1,"H34256787897665");
+        BCdrivetest.ValidateLicense(function2,"H3425678789765");
+        QCdrivetest.ValidateLicense(function3,"H3425678789716");
 
     }
 }
